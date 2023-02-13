@@ -15,5 +15,7 @@ export interface IBreaker {
   failure(state: CircuitState): boolean;
 }
 
-export * from './SamplingBreaker';
 export * from './ConsecutiveBreaker';
+export * from './RedisSamplingBreaker';
+export * from './SamplingBreaker';
+
