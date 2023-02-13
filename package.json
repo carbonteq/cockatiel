@@ -1,6 +1,6 @@
 {
-  "name": "cockatiel",
-  "version": "3.0.0",
+  "name": "resilience",
+  "version": "0.0.15",
   "description": "A resilience and transient-fault-handling library that allows developers to express policies such as Backoff, Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner. Inspired by .NET Polly.",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -9,7 +9,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prepublishOnly": "npm run compile",
+    "pre:compile": "npm run compile",
     "test": "rimraf dist && tsc && npm run test:unit && npm run test:fmt && npm run test:md",
     "test:cover": "rimraf dist && tsc && nyc npm run test:unit",
     "test:unit": "mocha",
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor4312/cockatiel.git"
+    "url": "git+git@github.com:carbonteq/resilience.git"
   },
   "keywords": [
     "circuit-breaker",
@@ -53,12 +53,9 @@
     "fluent",
     "polly"
   ],
-  "author": "Connor Peet <connor@peet.io>",
+  "author": "Carbonteq",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/connor4312/cockatiel/issues"
-  },
-  "homepage": "https://github.com/connor4312/cockatiel#readme",
+  "homepage": "https://github.com/carbonteq/resilience#readme",
   "devDependencies": {
     "@types/chai": "^4.3.1",
     "@types/chai-as-promised": "^7.1.5",
